@@ -1,15 +1,66 @@
-.textStrock {
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #cf9c5d;
+/* Common */
+.apex-strock,
+.apex-text,
+.bata-text,
+.bata-strock,
+.lotto-text,
+.lotto-strock {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 6px;
+  top: 40px;
+  width: 1500px;
+  height: 800px;
 }
 
-.selected .strock-img {
-  animation: strock-img 1s;
+/* Apex */
+.apex-strock {
+  background-image: url("../../assets/apex stroke.png");
+}
+
+.apex-text {
+  background-image: url("../../assets/apex fill.png");
+  z-index: -1;
+}
+
+/* Bata */
+.bata-strock {
+  background-image: url("../../assets/bata strok.png");
+}
+
+.bata-text {
+  background-image: url("../../assets/bata fill.png");
+  z-index: -1;
+}
+
+/* Lotto */
+.lotto-strock {
+  background-image: url("../../assets/lotto stroke.png");
+}
+
+.lotto-text {
+  background-image: url("../../assets/lotto fill.png");
+  z-index: -1;
+}
+
+/* Common Animation */
+.selected .apex-strock {
+  animation: apex-strock 1s;
   animation-timing-function: ease-in-out;
 }
 
-@keyframes strock-img {
+.selected .bata-strock {
+  animation: apex-strock 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.selected .lotto-strock {
+  animation: apex-strock 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes apex-strock {
   0% {
     transform: translate(0px, -500px) scale(0);
     opacity: 0;
@@ -19,29 +70,6 @@
     transform: translate(0) scale(1);
     opacity: 1;
   }
-}
-
-.strock-img {
-  position: absolute;
-  background-image: url("../../assets/apex stroke.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 6px;
-  top: 40px;
-  width: 1500px;
-  height: 800px;
-}
-
-.apex-text {
-  position: absolute;
-  background-image: url("../../assets/apex fill.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: 5px;
-  top: 40px;
-  width: 1500px;
-  height: 800px;
-  z-index: -1;
 }
 
 .carousel .slide img {
@@ -86,6 +114,7 @@
 .carousel .thumb:nth-child(2) {
   background-image: url("../../assets/BATA FILL.png");
 }
+
 .carousel .thumb:nth-child(3) {
   background-image: url("../../assets/LOTTO fill.png");
 }
@@ -112,19 +141,19 @@ li.thumb img {
   margin-top: -50px;
 }
 
-.thumb.selected img{
+.thumb.selected img {
   animation: thumbSelected 1s;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes thumbSelected {
   0% {
-    transform:  scale(0);
+    transform: scale(0);
     opacity: 0;
   }
 
   100% {
-    transform:  scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -169,7 +198,6 @@ li.thumb img {
 }
 
 /* Pagination */
-
 .control-dots {
   width: 200px !important;
   height: 50px !important;

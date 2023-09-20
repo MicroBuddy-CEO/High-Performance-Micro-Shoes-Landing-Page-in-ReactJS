@@ -4,61 +4,51 @@ import image1 from "../../assets/apex s1.png";
 import image2 from "../../assets/bata.png";
 import image3 from "../../assets/lotto.png";
 import "./MainSlider.css";
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
-
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const MainSlider2 = () => {
+  const datas = [
+    {
+      img: image1,
+      classStrock: "apex-strock",
+      classFill: "apex-text",
+    },
+    {
+      img: image2,
+      classStrock: "bata-strock",
+      classFill: "bata-text",
+    },
+    {
+      img: image3,
+      classStrock: "lotto-strock",
+      classFill: "lotto-text",
+    },
+  ];
+
   return (
     <Carousel
-      showArrows={true} 
-      showThumbs={true} 
+      showThumbs={true}
       swipeable={true}
-      // autoPlay={true}
+      autoPlay={true}
       infiniteLoop={true}
       fadeIn={true}
       showStatus={false}
-      interval={5000}
+      useKeyboardArrows={true}
     >
-
-      <div className="slide1 relative carousel-slide">
-        <img src={image1} alt="Slide 1" className="z-[10]" />
-        <div className="apex-text"></div>
-        <div className="strock-img"></div>
-        <div className="flex absolute top-[62%] right-[180px] text-xl gap-1 text-[#cf9c5d]">
-          <AiFillStar/> 
-          <AiFillStar/> 
-          <AiFillStar/> 
-          <AiFillStar/>
-          <AiOutlineStar/>
+      {datas.map((data, i) => (
+        <div key={i}>
+          <img src={data.img} alt="Slide 1" className="z-[10]" />
+          <div className={data.classFill}></div>
+          <div className={data.classStrock}></div>
+          <div className="flex absolute top-[61.5%] right-[180px] text-xl gap-1 text-[#cf9c5d]">
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+            <AiOutlineStar />
           </div>
-      </div>
-
-      <div className="slide1 relative carousel-slide">
-        <img src={image2} alt="Slide 1" className="z-[10]" />
-        <div className="apex-text"></div>
-        <div className="strock-img"></div>
-        <div className="flex absolute top-[62%] right-[180px] text-xl gap-1 text-[#cf9c5d]">
-          <AiFillStar/> 
-          <AiFillStar/> 
-          <AiFillStar/> 
-          <AiFillStar/>
-          <AiOutlineStar/>
-          </div>
-      </div>
-
-      <div className="slide1 relative carousel-slide">
-        <img src={image3} alt="Slide 1" className="z-[10]" />
-        <div className="apex-text"></div>
-        <div className="strock-img"></div>
-        <div className="flex absolute top-[62%] right-[180px] text-xl gap-1 text-[#cf9c5d]">
-          <AiFillStar/> 
-          <AiFillStar/> 
-          <AiFillStar/> 
-          <AiFillStar/>
-          <AiOutlineStar/>
-          </div>
-      </div>
-
+        </div>
+      ))}
     </Carousel>
   );
 };
