@@ -13,7 +13,7 @@ const App = () => {
         <MainSlider2 />
       </div>
 
-      <div className="absolute left-[150px] bottom-[128px]">
+      <div className="absolute left-[150px] bottom-[80px]">
         <SocialIcons />
       </div>
 

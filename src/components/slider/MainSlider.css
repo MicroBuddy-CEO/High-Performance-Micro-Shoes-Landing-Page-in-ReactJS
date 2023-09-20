@@ -4,6 +4,23 @@
   -webkit-text-stroke-color: #cf9c5d;
 }
 
+.selected .strock-img {
+  animation: strock-img 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes strock-img {
+  0% {
+    transform: translate(0px, -500px) scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
 .strock-img {
   position: absolute;
   background-image: url("../../assets/apex stroke.png");
@@ -27,10 +44,6 @@
   z-index: -1;
 }
 
-.carousel-status {
-  display: none;
-}
-
 .carousel .slide img {
   width: 63%;
   vertical-align: top;
@@ -39,8 +52,7 @@
   border: 0;
 }
 
-
-/* .selected img {
+.selected img {
   animation: increase 1s;
   animation-timing-function: ease-in-out;
 }
@@ -53,49 +65,33 @@
   100% {
     transform: translate(0) scale(1);
   }
-} */
-
-.selected img {
-    animation: increase 1s forwards;
-    animation-timing-function: ease-in-out;
-  }
-  
-  .carousel-slide:not(.selected) img.reverse {
-    animation: decrease 1s forwards;
-    animation-timing-function: ease-in-out;
-  }
-  
-  @keyframes increase {
-    0% {
-      transform: translate(350px, 250px) scale(0);
-    }
-  
-    100% {
-      transform: translate(0) scale(1);
-    }
-  }
-  
-  @keyframes decrease {
-    0% {
-      transform: translate(0) scale(1);
-    }
-  
-    100% {
-      transform: translate(350px, 250px) scale(0);
-    }
-  }
-
-
-
-.carousel .thumb {
-    display: inline-block;
-    margin-right: 6px;
-    border: none;
-    padding: 2px;
 }
 
-.carousel .thumb:hover{
-    border: none;
+.carousel .thumb {
+  display: inline-block;
+  margin-right: 5px;
+  border: none;
+  background: black;
+  border-radius: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0px 15px;
+  overflow: visible;
+}
+
+.carousel .thumb:nth-child(1) {
+  background-image: url("../../assets/apex fill.png");
+}
+
+.carousel .thumb:nth-child(2) {
+  background-image: url("../../assets/BATA FILL.png");
+}
+.carousel .thumb:nth-child(3) {
+  background-image: url("../../assets/LOTTO fill.png");
+}
+
+.carousel .thumb:hover {
+  border: none;
 }
 
 .thumb {
@@ -105,9 +101,32 @@
 
 .thumbs.animated {
   position: absolute;
-  top: -76px;
+  top: -110px;
   left: 0px;
   z-index: 9999;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+li.thumb img {
+  margin-top: -50px;
+}
+
+.thumb.selected img{
+  animation: thumbSelected 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes thumbSelected {
+  0% {
+    transform:  scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform:  scale(1);
+    opacity: 1;
+  }
 }
 
 .control-arrow {
