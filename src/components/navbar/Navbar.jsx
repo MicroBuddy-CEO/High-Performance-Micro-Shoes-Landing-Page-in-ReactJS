@@ -13,6 +13,7 @@ export default function Navbar() {
   return (
     <nav className="w-full px-[150px]">
       <div className="flex justify-between items-center pt-[30px] pr-4">
+
         <a href="" className="flex items-end gap-2 w-[165px] h-[90px]">
           <h1 className="text-[27px] font-[900] text-[#cf9c5d] uppercase micro">
             Micro
@@ -52,7 +53,9 @@ export default function Navbar() {
             />
             <img src={search} alt="" width={24} height={24} />
           </div>
+
         </div>
+
       </div>
     </nav>
   );

@@ -3,9 +3,12 @@ import Navbar from "./components/navbar/Navbar";
 import MainSlider2 from "./components/slider/MainSlider2";
 import SocialIcons from "./utils/SocialIcons";
 import bgCircle from "./assets/backgroundCircles.png";
+
+
 const App = () => {
   return (
     <section className="app-container font-Montserrat">
+      
       <div className="bg-container" />
       <Navbar />
 

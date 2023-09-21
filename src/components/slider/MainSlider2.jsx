@@ -1,8 +1,11 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+
 import image1 from "../../assets/apex s1.png";
 import image2 from "../../assets/bata.png";
 import image3 from "../../assets/lotto.png";
+
+
 import "./MainSlider.css";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
