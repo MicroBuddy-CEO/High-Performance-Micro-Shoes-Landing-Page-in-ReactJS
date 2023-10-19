@@ -7,11 +7,13 @@
 }
 
  .micro {
+  animation-delay: 5s;
   animation: micro 2s ease-in-out;
   margin-bottom: 30px;
 }
 
 .shoe {
+  animation-delay: 2s !important;
   animation: shoe 1s ease-in-out;
   margin-bottom: 0px;
   margin-left: -50px;
@@ -30,6 +32,7 @@
 }
 
 .logo img {
+  animation-delay: 2s !important;
   animation: shoeImg 0.5s ease-in-out;
   margin-bottom: -6px;
   margin-left: -8px;
